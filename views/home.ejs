@@ -1,0 +1,8 @@
+<%-include('./partials/header')-%>
+  <h1>Home</h1>
+  <p><%=content %></p>
+  <% item.forEach(i => { %>
+    <h1><%=i.title%></h1>
+    <p><%=i.body.split(" ").splice(0,20).join(" ") %>...<a href='/<%=i.title%>'>Read More</a></p>
+  <% }) %>
+<%-include('./partials/footer')-%>
